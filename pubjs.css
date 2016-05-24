@@ -1,0 +1,137 @@
+
+/* container div for book */
+.pubjs {
+	text-align: center;
+	background-color: rgb(220,220,220);
+	position: relative;
+}
+
+/* individual page div */
+.pubjsPage {
+	display: inline-block;
+	vertical-align: top;	/* prevent extra space at bottom :( */
+	position: relative;
+	
+	width: 50%;
+	max-width: 400px;
+	height: auto;
+	margin: 0;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border: 1px solid rgba(0,0,0, 0.2);
+}
+#rightPage {
+
+}
+#leftPage {
+	left: 1px;		/* adjust to prevent double borders in the gutter */
+}
+#rightPage:hover {
+	/*cursor: e-resize;*/
+}
+#leftPage:hover {
+	/*cursor: w-resize;*/
+}
+
+/* image inside page */
+.pubjsPage img {
+	width: 100%;
+	height: auto;
+	display: block;
+	word-spacing: -1;
+}
+
+/* navigation interface */
+#pubjsForwardNav, #pubjsBackwardNav {
+	position: absolute;
+	top: 0;
+	width: 20%;
+	height: 100%;
+    padding: 0 0.2em;
+	
+	background-color: rgb(0,0,0);
+	font-size: 2em;
+    line-height: 0.2em;
+    color: white;
+
+    opacity: 0;     /* hidden until hovered */
+    transition: 0.8s;
+}
+#pubjsForwardNav {
+	right: 0;
+}
+#pubjsBackwardNav {
+	left: 0;
+}
+
+/* show navigation on hover */
+/* semi-transparent on parent hover; mostly opaque on hover */
+#leftPage:hover #pubjsBackwardNav, #rightPage:hover #pubjsForwardNav {
+	opacity: 0.5;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#rightPage #pubjsForwardNav:hover, #leftPage #pubjsBackwardNav:hover {
+	opacity: 0.7;
+	transition: 0.4s;
+}
+
+/* nav arrows */
+.pubjs a, .pubjs a:link, .pubjs a:visited {
+    color: rgba(255,255,255, 0.6);
+    text-decoration: none;
+}
+.pubjs a:active, .pubjs a:hover {
+    color: rgb(255,150,0);
+    text-decoration: none;
+}
+.fullJump {
+	-webkit-transform: rotate(180deg);	/* flip orientation */
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+/* page numbers */
+#pageNumsLeft, #pageNumsRight {
+	font-size: 0.45em;
+	line-height: 3em;
+	color: rgba(255,255,255, 0.6);
+}
+
+/* byline below book div */
+#pubjsByline {
+	
+}
+
+/* pubjs credit overlay */
+/* disabled by default */
+#credit {
+	position: absolute;
+	font-size: 0.7em;
+	
+	bottom: -1em;
+	right: 0px;
+	padding: 0.8em;
+	
+	background-color: rgba(0,0,0, 0.05);
+	z-index: 9999;
+}
+#credit a {
+	color: rgba(0,0,0, 0.3);
+}
+#credit a:hover {
+	color: rgb(230,100,0);
+}
+
+
+/* add padding when pages are taller than wide; */
+@media screen and (min-width: 800px) {
+    .pubjs {
+        padding: 15px;
+    }
+}
+

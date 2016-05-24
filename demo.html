@@ -1,0 +1,34 @@
+<!doctype html>
+<html profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<title>Book JS Demo</title>
+
+    <!-- [ see README.md for full details ] -->
+
+    <!-- STEP 1: IMPORT CSS -->
+	<link rel="stylesheet" href="pubjs.css">
+
+    <!-- import your own CSS after to override pubjs styles -->
+    <style>
+        html, body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+	<!-- STEP 2: CREATE DIV FOR BOOK -->
+	<div class="pubjs" data-pages="pages" data-title="Field Guide" data-author="Jeff Thompson and Angeles Cossio" data-url="FieldGuide.pdf" data-datePublished="2012">
+		<!-- nothing in here, this is where your book will appear! -->
+	</div>
+
+    <!-- STEP 3: IMPORT JS
+         right before closing <body> tag -->
+    <script src="jquery-2.2.4.min.js"></script>
+    <script src="pubjs.js"></script>
+</body>
+</html>
+
