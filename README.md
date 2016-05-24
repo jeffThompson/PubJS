@@ -3,6 +3,9 @@ PubJS
 
 `PubJS` is a simple, super lightweight tool for embedding PDF books, magazines, and other multi-page documents in a website. Tools like Issuu look nice, but offer minimal styling, require a paid subscription to remove ads, and rely on Flash (uck). PubJS is one small Javascript, CSS, and PHP file, allowing for easy customization.
 
+#### LIVE DEMO  
+See an example of PubJS in action here: [http://www.jeffreythompson.org/pubjs](http://www.jeffreythompson.org/pubjs)
+
 #### JQUERY
 PubJS does require `JQuery`, which handles Ajax calls and some other messy tasks. Want to port a version that doesn't require it? That would be super!
 
