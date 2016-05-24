@@ -19,7 +19,7 @@ if (container.hasAttribute('data-moveSinglePage')) {
 // default = 0 (cover), can be set as attribute
 var page = 0;
 if (container.hasAttribute('data-startPage')) {
-	page = container.getAttribute('data-startPage');
+	page = parseInt(container.getAttribute('data-startPage'));
 }
 
 // optional: show page numbers in nav UI

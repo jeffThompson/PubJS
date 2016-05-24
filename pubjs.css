@@ -9,18 +9,18 @@
 /* individual page div */
 .pubjsPage {
 	display: inline-block;
-	vertical-align: top;	/* prevent extra space at bottom :( */
 	position: relative;
+	font-size: 0;	 /* prevent extra space at the bottom :( */
 	
 	width: 50%;
 	max-width: 400px;
 	height: auto;
 	margin: 0;
+	padding: 0;
 
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-	border: 1px solid rgba(0,0,0, 0.2);
 }
 #rightPage {
 
@@ -53,7 +53,6 @@
 	
 	background-color: rgb(0,0,0);
 	font-size: 2em;
-    line-height: 0.2em;
     color: white;
 
     opacity: 0;     /* hidden until hovered */
@@ -64,6 +63,10 @@
 }
 #pubjsBackwardNav {
 	left: 0;
+}
+#pubjsForwardNav p, #pubjsBackwardNav p {
+	font-size: 32px;	/* reset font size after 0 above */
+	margin: 0;
 }
 
 /* show navigation on hover */
