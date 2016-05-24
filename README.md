@@ -16,6 +16,8 @@ The only step required to setup your book is to create an image file of each pag
 
 Creates a series of images named `page_000.jpg` at 900px in the largest dimension and high quality. File sizes should be approximately 100-400k each.
 
+(If you get weird black backgrounds on white pages, it's probably because the pages have transparent backgrounds. To fix this, add `-background white -alpha remove`.)
+
 #### BASICS  
 To place your book, just make an empty `div` with the class `PubJS`. You also need to list a path to where the page images (created in the previous step) are located using the `data-pages` attribute.
 
